@@ -5,7 +5,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible 		" get out of horrible vi-compatible mode
 set noswapfile			" Don't bother with swap file
-" set nobackup			" Don't worry about backups
 filetype on 			" detect the type of file
 filetype indent on		" indent by default
 set history=100 		" How many lines of history to remember
@@ -20,17 +19,12 @@ set isk+=_,$,@,%,#,- 	" none of these should be word dividers, so make them not 
 " Colours / Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on				" syntax highlighting on
-":exec "colo baycomb"
-":exec "colo vividchalk"
-":exec "colo zenburn"
-:colors ir_black
+:colors ir_black		" the color scheme
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files / Backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set backup 							" make backup file
-" set backupdir=$VIM\vimfiles\backup 	" where to put backup file
-" set directory=$VIM\vimfiles\temp 	" directory is the directory for temp file
 set backupdir=.\\.backup,.,c:\\tmp
 set directory=.,.\\.backup,c:\\tmp 
   
@@ -53,52 +47,39 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\	" make the splitters between windows be bla
 au GUIEnter * simalt ~x					" maximize window on start
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Visual Cees
+" Visual Cues
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showmatch 						" show matching brackets
 set mat=2 							" how many tenths of a second to blink matching brackets for
 set nohlsearch 						" do not highlight searched for phrases
 set incsearch 						" BUT do highlight as you type you search phrase
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$ 	" what to show when I hit :set list
-"set lines=80 						" 80 lines tall
-"set columns=160 					" 160 cols wide
-"set so=10 							" Keep 10 lines (top/bottom) for scope
 set novisualbell 					" don't blink
 set noerrorbells 					" no noises
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%04l,%04v][%p%%]
-" set statusline=[%l,%c\ %P%M]\ %f\ %r%h%w
 set laststatus=0 					" always show the status line
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text Formatting / Layout
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set fo=tcrqn 			" See Help (complex)
 set ai 					" autoindent
 set si 					" smartindent 
 set cindent 			" do c-style indenting
-"autocmd FileType * set tabstop=4|set shiftwidth=4|set softtabstop=4|set noexpandtab
-"set tabstop=4 			" tab spacing (settings below are just to unify it)
-"set softtabstop=4 		" unify
-"set shiftwidth=4 		" unify 
-"set noexpandtab 		" real tabs please!
-set nowrap 				" do not wrap lines  
-"set foldmethod=syntax	" set an indent as a fold
+set nowrap				" do not wrap lines  
 
 " Tab settings
-" set noexpandtab
 autocmd FileType ruby set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
-autocmd BufEnter *.haml set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
-autocmd BufEnter *.sass set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
-autocmd BufEnter *.scss set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
-"au BufNewFile,BufRead *.scss		setf scss
+autocmd FileType *.haml set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
+autocmd FileType *.sass set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
+autocmd FileType *.scss set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
+autocmd FileType *.yml set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
 
-autocmd BufNewFile,BufRead *.haml setf haml
-autocmd BufNewFile,BufRead *.sass setf sass
-autocmd BufNewFile,BufRead *.scss setf scss
+set tabstop=4			" number of default spaces per tab
+set shiftwidth=4		" when shifting code, set the spaces << or >>
+set softtabstop=4 		" number of spaces in tab when editing
+set expandtab			" use spaces instead of tab characters
 
-autocmd BufEnter *.yml set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
-autocmd FileType * set tabstop=4|set shiftwidth=4|set softtabstop=4 |set noexpandtab
-set smarttab 			" use tabs at the start of a line, spaces elsewhere
+set smarttab			" use tabs at the start of a line, spaces elsewhere
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -173,7 +154,6 @@ let g:jquery_doc_command='"c:\Program Files\Mozilla Firefox\firefox.exe"'
 " Perl
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
