@@ -92,13 +92,13 @@ set smarttab			" use tabs at the start of a line, spaces elsewhere
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CList/ Taglist Tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Ctags_Cmd = 'C:\Tools\ctags57\ctags.exe' 	" Location of ctags
-let Tlist_Sort_Type = "name" 						" order by 
-"let Tlist_Use_Right_Window = 1 					" split to the right side of the screen
-let Tlist_Compart_Format = 1 						" show small menu
-" let Tlist_Exist_OnlyWindow = 1 					" if you are the last, kill yourself
-let Tlist_File_Fold_Auto_Close = 0 					" Do not close tags for other files
-" let Tlist_Enable_Fold_Column = 0 					" Do not show folding tree
+let Tlist_Ctags_Cmd = 'C:\Tools\Vim\ctags.exe' 	" Location of ctags
+let Tlist_Sort_Type = "name" 									" order by 
+"let Tlist_Use_Right_Window = 1 								" split to the right side of the screen
+let Tlist_Compart_Format = 1 									" show small menu
+" let Tlist_Exist_OnlyWindow = 1 								" if you are the last, kill yourself
+let Tlist_File_Fold_Auto_Close = 0 								" Do not close tags for other files
+" let Tlist_Enable_Fold_Column = 0 								" Do not show folding tree
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 
@@ -126,12 +126,12 @@ let NERDTreeIgnore=['\CVS$']
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RAILS PLUGIN
+" RAILS PLUGIN - DEPRECATED
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "if !empty(matchstr($MY_RUBY_HOME, 'jruby'))
 ""  let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/rubysite_ruby/*'),"\n"),',')
 "endif
-let g:ruby_path = "C:\Ruby193\bin"
+"let g:ruby_path = "C:\Ruby193\bin"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,8 +147,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 " Ruby-DOC && JQUERY Doc
 " http://lucapette.com/vim/rails/vim-for-rails-developers-browse-ruby-rspec-and-rails-docs-quickly/
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ruby_doc_command='"c:\Program Files\Mozilla Firefox\firefox.exe"'
-let g:jquery_doc_command='"c:\Program Files\Mozilla Firefox\firefox.exe"'
+"let g:ruby_doc_command='"c:\Program Files\Mozilla Firefox\firefox.exe"'
+"let g:jquery_doc_command='"c:\Program Files\Mozilla Firefox\firefox.exe"'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Perl
@@ -197,3 +197,7 @@ map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
+
+" Map key to inserting a single character
+noremap ; i<Space><Esc>r
+:map <C-x> ylpr
