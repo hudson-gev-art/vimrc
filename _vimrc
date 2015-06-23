@@ -15,6 +15,9 @@ filetype plugin on 		" load filetype plugins
 set viminfo+=! 			" make sure it can save viminfo
 set isk+=_,$,@,%,#,- 	" none of these should be word dividers, so make them not be
 
+set encoding=utf-8 nobomb 
+set autoread            " Auto-reload buffers when files are changed on disk
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours / Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
