@@ -35,6 +35,7 @@ set directory=.,.\\.backup,c:\\tmp
 " VIM UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmenu 							" turn on wild menu
+set wildignore+=*/bin*
 set ruler 								" Always show current positions along the bottom 
 set cmdheight=2 						" the command bar is 2 high
 set number 								" turn on line numbers
@@ -104,6 +105,14 @@ let Tlist_File_Fold_Auto_Close = 0 								" Do not close tags for other files
 " let Tlist_Enable_Fold_Column = 0 								" Do not show folding tree
 nnoremap <silent> <F8> :TlistToggle<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_root_markers = ['Gemfile']
+let g:ctrlp_custom_ingore = '\/bin'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mini Buffer
