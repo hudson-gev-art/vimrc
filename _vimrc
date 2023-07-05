@@ -15,7 +15,7 @@ filetype plugin on 		" load filetype plugins
 set viminfo+=! 			" make sure it can save viminfo
 set isk+=_,$,@,%,#,- 	" none of these should be word dividers, so make them not be
 
-set encoding=utf-8 nobomb 
+set encoding=utf-8 nobomb
 set autoread            " Auto-reload buffers when files are changed on disk
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -29,20 +29,20 @@ syntax on				" syntax highlighting on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set backup 							" make backup file
 set backupdir=.\\.backup,.,c:\\tmp
-set directory=.,.\\.backup,c:\\tmp 
-  
+set directory=.,.\\.backup,c:\\tmp
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM UI
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmenu 							" turn on wild menu
 set wildignore+=*/bin*
-set ruler 								" Always show current positions along the bottom 
+set ruler 								" Always show current positions along the bottom
 set cmdheight=2 						" the command bar is 2 high
 set number 								" turn on line numbers
 set backspace=2 						" make backspace work normal
 set whichwrap+=<,>,h,l  				" backspace and cursor keys wrap to
 set mouse=a 							" use mouse everywhere
-set shortmess=atI 						" shortens messages to avoid 'press a key' prompt 
+set shortmess=atI 						" shortens messages to avoid 'press a key' prompt
 set report=0 							" tell us when anything is changed via :...
 set noerrorbells 						" don't make noise
 " set cursorcolumn 						" Highlights column
@@ -67,9 +67,9 @@ set laststatus=0 					" always show the status line
 " Text Formatting / Layout
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ai 					" autoindent
-set si 					" smartindent 
+set si 					" smartindent
 set cindent 			" do c-style indenting
-set nowrap				" do not wrap lines  
+set nowrap				" do not wrap lines
 
 " Tab settings
 autocmd FileType ruby set tabstop=2|set shiftwidth=2|set softtabstop=2 |set expandtab
@@ -85,7 +85,6 @@ set expandtab			" use spaces instead of tab characters
 
 set smarttab			" use tabs at the start of a line, spaces elsewhere
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Explore commands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,7 +96,7 @@ set smarttab			" use tabs at the start of a line, spaces elsewhere
 " CList/ Taglist Tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let Tlist_Ctags_Cmd = 'C:\Tools\Vim\ctags.exe' 	" Location of ctags
-let Tlist_Sort_Type = "name" 									" order by 
+let Tlist_Sort_Type = "name" 									" order by
 "let Tlist_Use_Right_Window = 1 								" split to the right side of the screen
 let Tlist_Compart_Format = 1 									" show small menu
 " let Tlist_Exist_OnlyWindow = 1 								" if you are the last, kill yourself
